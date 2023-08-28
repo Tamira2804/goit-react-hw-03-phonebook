@@ -19,9 +19,10 @@ class ContactForm extends Component {
 
     if (this.state.name.trim() !== '') {
       const newContact = {
+        ...this.state,
         id: shortid.generate(),
-        name: this.state.name,
-        number: this.state.number,
+        // name: this.state.name,
+        // number: this.state.number,
       };
 
       this.props.onAddContact(newContact);
